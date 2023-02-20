@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    font-family: Source Sans Pro;
+    position: relative;
+    --color-claro: #F0F7F4;
+    --color-oscuro: #32292F;
+    --color-detalle: #70ABAF;
+    --color-prueba: #d8dddb;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-claro);
+}
+
+/* header */
+
+header {
+    background-color: #F0F7F4;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    padding-top: 15px;
+    z-index: 10;
+    color: var(--color-oscuro);
+    height: 8vh;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    font-size: 1rem;
+}
+
+#header-img-container {
+    max-width: 70px;
+    max-height: 70px;
+}
+    
+#header-img {
+        height: 100%;
+        width: 100%;
+        transform: scaleX(-1);
+}
+
+/* navbar */
+
+#navbar-div {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    row-gap: 1px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    align-items: center;
+    column-gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-oscuro);
+}
+
+a:active {
+    color: var(--color-detalle);
+}
+
+/* cosa del medio */
+
+#form-div {
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    ;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+#form input {
+    border-radius: 3px;
+    border: 0.3px solid var(--color-oscuro);
+}
+
+#email {
+    width: 200px;
+    height: 22px;
+    font-size: 1rem;
+}
+
+#submit {
+    background-color: var(--color-detalle);
+    color: var(--color-oscuro);
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* height: 5vh; */
+}
+
+/* features */
+
+#features-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 65%;
+    height: 45vh;
+    margin: auto;
+}
+
+/* icons */
+
+#icon-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.fa-solid {
+    color: var(--color-detalle);
+    font-size: 45px;
+}
+
+/* text */
+
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+}
+
+/* about */
+
+#video-container {
+    width: 40%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+#video {
+    width: 100%;
+}
+
+/* pricing */
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 7vh;
+}
+
+.price-box {
+    border: 1px solid var(--color-oscuro);
+    width: 31%;
+    display: flexbox;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dog-breed {
+    background-color: var(--color-prueba);
+    color: var(--color-oscuro);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 3%;
+}
+
+.dog-price {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-top: 5%;
+}
+
+.dog-description {
+    font-size: 1.2rem;
+    padding-top: 7%;
+}
+
+.dog-button {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 40%;
+    height: 5vh;
+    background-color: var(--color-detalle);
+    font-size: 1.2rem;
+    border: none;
+}
+
+.dog-button:hover {
+    cursor: pointer;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--color-prueba);
+    font-size: 1rem;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8%;
+}
+
+#footer-links {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    margin-left: 80%;
+}
+
+#footer-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* media queries */
+
+
+/* for 4K screens */
+@media only screen and (min-width: 2400px) {
+    #features-container{
+        width: 40%;
+    } 
+
+    #video-container {
+        width: 30%;
+    }
+
+    #footer-links {
+        width: 10%;
+        margin-left: 90%;
+    }
+}
+
+/* for laptops L */
+@media only screen and (min-width: 1400px) {
+    #features-container {
+        height: 30vh;
+    }
+
+    footer {
+        height: 5vh;
+    }
+}
+
+/* for laptop */
+@media only screen and (min-width: 1020px) {
+    footer {
+        height: 5vh;
+    }
+}
+
+
+/* for tablets */
+@media only screen and (max-width: 770px) {
+    #footer-links {
+        width: 30%;
+        margin-left: 70%;
+    }
+}
+
+/* for mobile L */
+
+@media only screen and (max-width: 430px) {
+    #header-logo {
+        width: 50%;
+        font-size: 0.7rem;
+    }
+
+    #header-img-container {
+        width: 50%;
+    }
+
+    #navbar-div {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #nav-bar {
+        column-gap: 20px;
+        font-size: 1.1rem;
+    }
+
+    #features-container {
+        width: 90%;
+    }
+
+    #icon-list {
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+
+    #video-container {
+        width: 80%;
+    }
+
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        row-gap: 15px;
+        
+    }
+
+    .price-box {
+        width: 80%;
+        margin: auto;
+    }
+
+    .dog-button {
+        width: 60%;
+    }
+
+    footer {
+        width: 90%;
+        align-items: center;
+    }
+
+    #footer-links {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
+/* for mobile M */
+@media only screen and (max-width: 380px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 16vh;
+    }
+
+    #header-logo {
+        width: 100%;
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+    
+
+  #icon-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* for mobile S */
+@media only screen and (max-width: 330px) {
+    #features-container {
+        height: 62vh;
+    }
+
+    #icon-list {
+        padding-bottom: 50px;
+    }
+
+    #footer-links {
+        width: 70%;
+    }
+}
